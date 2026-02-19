@@ -1,0 +1,12 @@
+{
+  "name": "Antigravity 1.18.3 Clean Test",
+  "dockerComposeFile": "../docker-compose.yml",
+  "service": "test-app",
+  "workspaceFolder": "/workspace",
+  "customizations": {
+    "antigravity": {
+      "settings": {},
+      "extensions": []
+    }
+  }
+}

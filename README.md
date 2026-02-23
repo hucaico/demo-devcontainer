@@ -22,10 +22,10 @@ This template implements a multi-layered fix to ensure a smooth "Reopen in Conta
 
 * **`devcontainer.json`**:
   * Explicitly links to the `docker-compose.yml` file.
-  * ⚠️ **CRITICAL**: Sets `"overrideCommand": false` to prevent the IDE from bypassing the custom startup script defined in `docker-compose.yml` and replacing it with a `sleep` command.
+  * Uses the `"postCreateCommand"` hook to safely execute the custom server installation script in the background *after* the container is created, without disrupting the IDE's connection lifecycle.
 * **`docker-compose.yml`**:
-* **Volume Mount**: Corrects the mount to `.:/workspace` (current directory) to prevent indexing unrelated files.
-* **Startup Command**: Overrides the default command to execute a custom server installation script before sleeping.
+  * **Volume Mount**: Corrects the mount to `.:/workspace` (current directory) to prevent indexing unrelated files.
+  * **Keep-Alive**: Uses `command: sleep infinity` to prevent the default Debian image from immediately exiting.
 
 
 

@@ -6,5 +6,5 @@ services:
     volumes:
       - .:/workspace:cached
       - ./server-install.sh:/usr/local/bin/server-install.sh
-    command: /bin/sh -c "chmod +x /usr/local/bin/server-install.sh && /usr/local/bin/server-install.sh && sleep infinity"
+    command: sleep infinity
     network_mode: bridge

@@ -3,7 +3,7 @@
   "dockerComposeFile": "../docker-compose.yml",
   "service": "test-app",
   "workspaceFolder": "/workspace",
-  "overrideCommand": false,
+  "postCreateCommand": "chmod +x /usr/local/bin/server-install.sh && /usr/local/bin/server-install.sh",
   "customizations": {
     "antigravity": {
       "settings": {},

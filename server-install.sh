@@ -17,6 +17,9 @@ SERVER_BIN="${SERVER_DIR}/bin/antigravity-server"
 
 echo "Checking Antigravity Server installation..."
 
+# Remove stale installation lock
+rm -f "$SERVER_DATA_DIR/.installation_lock"
+
 if [ ! -f "$SERVER_BIN" ]; then
     echo "Server not found at $SERVER_BIN"
     echo "Downloading Antigravity Server from $URL..."

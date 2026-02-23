@@ -3,6 +3,7 @@
   "dockerComposeFile": "../docker-compose.yml",
   "service": "test-app",
   "workspaceFolder": "/workspace",
+  "overrideCommand": false,
   "customizations": {
     "antigravity": {
       "settings": {},

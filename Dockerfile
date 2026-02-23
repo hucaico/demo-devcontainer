@@ -7,6 +7,9 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     procps \
     git \
     wget \
+    iproute2 \
+    libatomic1 \
+    netbase \
     && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /workspace

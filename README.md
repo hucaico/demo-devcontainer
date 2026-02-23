@@ -20,7 +20,9 @@ This template implements a multi-layered fix to ensure a smooth "Reopen in Conta
 
 ### 1. Corrected Configuration
 
-* **`devcontainer.json`**: Explicitly links to the `docker-compose.yml` file.
+* **`devcontainer.json`**:
+  * Explicitly links to the `docker-compose.yml` file.
+  * ⚠️ **CRITICAL**: Sets `"overrideCommand": false` to prevent the IDE from bypassing the custom startup script defined in `docker-compose.yml` and replacing it with a `sleep` command.
 * **`docker-compose.yml`**:
 * **Volume Mount**: Corrects the mount to `.:/workspace` (current directory) to prevent indexing unrelated files.
 * **Startup Command**: Overrides the default command to execute a custom server installation script before sleeping.

@@ -67,7 +67,7 @@ If the container hangs at "Starting Remote Server" or throws **Error 127**, it t
 * Start the container.
 * Run `server-install.sh` to setup the remote server.
 * Connect the IDE successfully.
-* **Pro-Tip**: You can verify the installation progress by running `docker logs <container_id>` to see the output of `server-install.sh`.
+* **Pro-Tip**: You can verify the installation progress by clicking "show logs" in the Dev Container creation notification (bottom right of the IDE) to see the output of `server-install.sh` and the new download progress bar.
 
 
 ## Files of Interest

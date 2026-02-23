@@ -27,7 +27,7 @@ if [ ! -f "$SERVER_BIN" ]; then
     mkdir -p "$SERVER_DIR"
     
     # Use wget with retry and visible progress
-    if ! wget -q --show-progress --progress=bar:force:noscroll --tries=3 -O /tmp/server.tar.gz "$URL"; then
+    if ! wget -q --show-progress --tries=3 -O /tmp/server.tar.gz "$URL"; then
         echo "Download failed!"
         exit 1
     fi

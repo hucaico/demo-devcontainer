@@ -70,6 +70,21 @@ If the container hangs at "Starting Remote Server" or throws **Error 127**, it t
 * **Pro-Tip**: You can verify the installation progress by clicking "show logs" in the Dev Container creation notification (bottom right of the IDE) to see the output of `server-install.sh` and the new download progress bar.
 
 
+## 🤖 Applying to Existing Repositories
+
+If you have an existing repository and want to inject this robust Antigravity Devcontainer setup without manually modifying your files, you can use the included AI Workflow skill:
+
+1. In your target repository, download the skill file into the `.agent/workflows` directory:
+   ```bash
+   mkdir -p .agent/workflows
+   curl -sL "https://raw.githubusercontent.com/hucaico/demo-devcontainer/main/.agent/workflows/inject-antigravity-devcontainer.md" -o .agent/workflows/inject-antigravity-devcontainer.md
+   ```
+2. Open the repository in your AI IDE and prompt the agent:
+   > *"Please apply the `.agent/workflows/inject-antigravity-devcontainer.md` skill to this repository."*
+   
+The AI will automatically patch your `Dockerfile`, `docker-compose.yml`, and `devcontainer.json` to support Antigravity while preserving your existing project setup!
+
+
 ## Files of Interest
 
 * `.devcontainer/devcontainer.json`: Main entry point configuration.

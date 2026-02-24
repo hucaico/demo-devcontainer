@@ -11,7 +11,7 @@ ARCH="x64"
 # Verified URL
 URL="https://edgedl.me.gvt1.com/edgedl/release2/j0qc3/antigravity/${QUALITY}/${VERSION}-${COMMIT}/${PLATFORM}-${ARCH}/Antigravity-reh.tar.gz"
 
-SERVER_DATA_DIR="/root/.antigravity-server"
+SERVER_DATA_DIR="/workspace/.antigravity-server-cache"
 SERVER_DIR="${SERVER_DATA_DIR}/bin/${VERSION}-${COMMIT}"
 SERVER_BIN="${SERVER_DIR}/bin/antigravity-server"
 

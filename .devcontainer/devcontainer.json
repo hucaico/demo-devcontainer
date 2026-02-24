@@ -8,6 +8,11 @@
     "antigravity": {
       "settings": {},
       "extensions": []
+    },
+    "vscode": {
+      "remoteEnv": {
+        "VSCODE_AGENT_FOLDER": "/workspace/.antigravity-server-cache"
+      }
     }
   }
 }

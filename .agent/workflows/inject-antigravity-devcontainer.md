@@ -26,6 +26,7 @@ Modify the `docker-compose.yml` to support the devcontainer lifecycle and script
 - **Constraint:** Ensure the `command:` is set to `sleep infinity` (or an equivalent keep-alive command) if the base image defaults to a short-lived process like `/bin/bash` or `sh`. Do NOT override the command if the container already runs a permanent blocking process (like a web server).
 
 ### Step 4: Patch `devcontainer.json`
-Update `.devcontainer/devcontainer.json` to properly trigger the background installation hook.
+Update `.devcontainer/devcontainer.json` to properly trigger the background installation hook and point the remote IDE to the cached server location.
 - **Constraint:** Add or update the `"postCreateCommand"` to execute the installation script: `"chmod +x /usr/local/bin/server-install.sh && /usr/local/bin/server-install.sh"`
+- **Constraint:** Add the setting `"vscode": { "remoteEnv": { "VSCODE_AGENT_FOLDER": "/workspace/.antigravity-server-cache" } }` inside the `"customizations"` object so the IDE knows where to find the persistent cached server.
 - **Constraint:** Ensure the obsolete `"overrideCommand": false` directive is NOT present, as it will block the IDE connection lifecycle indefinitely.
